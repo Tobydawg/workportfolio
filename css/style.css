@@ -4,6 +4,14 @@
   
   
   /* HEADER / NAV BAR STYLES START */
+
+  :root {
+    --grey:peachpuff;
+    --black:white;
+    --white:black;
+    --peachpuff:grey;
+
+  }
   
   header {
     padding: 20px 35px;
@@ -12,7 +20,6 @@
     justify-content: space-between;
     flex-wrap: wrap;
     
-
   }
   
   header h1 {
@@ -50,14 +57,11 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    color:gray;
     
   }
 
   
-  
-  
-
-
     .grid-container-1{
      
     height:500px;
@@ -75,15 +79,10 @@
     
     }
     
-    
-    
-
-
-
-      .grid-item-2{
+    .grid-item-2{
           
           border-style:solid;
-          border-color:whitesmoke;
+          border-color:black;
           border-radius:100px;
           height:320px;
           width:300px;
@@ -101,19 +100,11 @@
       border-style:solid;
       border-color:whitesmoke;
       background-image:url(https://images.unsplash.com/photo-1428592953211-077101b2021b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80);
-
+        color:black;
     }
 
     
-      img {
-        width:20%;
-        height:30%;
-        border-radius: 100px;
-        border-style:solid;
-        border-color:whitesmoke;
-
-    }
-  
+      
   
   .flex-container {
     margin: 100px;
@@ -131,14 +122,31 @@
   .section {
       
     padding: 10px;
+
+    /* next 3 involve headshot...main is a mystery*/
     
   }
+
+  img {
+    width:20%;
+    height:30%;
+    border-radius: 100px;
+    border-style:solid;
+    border-color:black;
+
+}
+
+img:hover{
+
+border-color:whitesmoke;
+}
+
 
 .main {
     display: block;
     margin-left: auto;
     margin-right:auto;
-    width:25%;
+    width:35%;
     height:35%;
     
 }
@@ -164,9 +172,12 @@ body {
     height: 400px;
     overflow:scroll;
     border-style:solid;
-    border-color:whitesmoke;
+    border-color:black;
     border-radius:12px;
+    flex-grow: initial;
+    
 }
+
 
 .middle {
 
@@ -174,6 +185,7 @@ body {
     top:60%;
     left:50%;
     transform:translate(-50%,-50%);
+    flex-grow:initial;
 }
 
 .navigation {
@@ -194,14 +206,27 @@ transition:0.4s;
 
 }
 
-.bar:hover{
-    background: #fff;
+li:hover{
+  color:gray;
 }
 
-input [name="r"]{
-position:absolute;
-visibility:hidden;
+
+
+.grid-item-3:hover{
+  color:whitesmoke;
+  border-color:black;
 }
+
+.grid-item-2:hover{
+  color:peachpuff;
+  border-color:whitesmoke;
+}
+
+.bar:hover{
+    background:whitesmoke;
+}
+
+
 
 .slides {
     width:500%;
@@ -224,22 +249,18 @@ visibility:hidden;
     
 }
 
-r1:checked ~ .s1 {
-    margin-left: 0;
-}
-
-
-
-
 .contact{
     color:whitesmoke;
     display:flex;
     flex-wrap:wrap;
     justify-content: space-between;
     align-items: center;
-    list-style:none;
-  }
     
+  }
+    /*media queries*/ 
+    
+    
+
   @media screen and (max-width: 980px) {
     header {
       padding-bottom: 0;
@@ -267,13 +288,101 @@ r1:checked ~ .s1 {
 
 
     }
+    section {
+      padding: 30px 15px;
+    }
+  
+     h3 {
+      flex: 1 100%;
+      text-align: center;
+    }
+  
+  
+    img {
+      flex: 0 32%;
+      margin-right: 0;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
     @media screen and (max-width: 768px) {
+
+      header {
+        padding-bottom: 0;
+        justify-content: center;
+      }
+    
+      header h1 {
+        width: 76%;
+        text-align: center;
+      }
+    
+      header nav ul {
+        margin-top: 13px;
+        width: 76%;
+        justify-content: center;
+      }
+    
+      header nav ul li a {
+        font-size: 15px;
+      }
+    
+      footer h2, footer div {
+        text-align: center;
+        width: 76%;
+      }
 
       section {
         padding: 30px 15px;
       }
     
-      .step h3 {
+       h3 {
+        flex: 1 76%;
+        text-align: center;
+      }
+    
+    
+      img {
+        flex: 0 32%;
+        margin-right: 0;
+        margin-top: 12px;
+        margin-bottom: 12px;
+      }
+
+
+    
+      @media screen and (max-width: 575px) {
+
+    
+ header {
+        padding-bottom: 0;
+        justify-content: center;
+      }
+    
+      header h1 {
+        width: 57%;
+        text-align: center;
+      }
+    
+      header nav ul {
+        margin-top: 10px;
+        width: 57%;
+        justify-content: center;
+      }
+    
+      header nav ul li a {
+        font-size: 15px;
+      }
+    
+      footer h2, footer div {
+        text-align: center;
+        width: 57%;
+      }
+      
+      section {
+        padding: 20px 9px;
+      }
+    
+       h3 {
         flex: 1 100%;
         text-align: center;
       }
@@ -284,34 +393,3 @@ r1:checked ~ .s1 {
         margin-right: 0;
         margin-top: 15px;
         margin-bottom: 15px;
-      }
-
-
-    
-      @media screen and (max-width: 575px) {
-
-        .hero-form button {
-          width: 100%;
-        }
-      
-        .section-title {
-          width: 95%;
-        }
-      
-        .intro p {
-          width: 100%;
-        }
-      
-        .trainer {
-          flex: 0 100%;
-        }
-      
-        .contact-info {
-          text-align: center;
-        }
-      
-        .contact-info > * {
-          flex: 0 100%;
-        }
-      }
-    
