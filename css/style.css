@@ -3,13 +3,13 @@
   
   
   
-  /* HEADER / NAV BAR STYLES START */
+  /* wasn't able to get variables to work */
 
   :root {
-    --grey:peachpuff;
-    --black:white;
-    --white:black;
-    --peachpuff:grey;
+    --grey:grey;
+    --black:black;
+    --white:whitesmoke;
+    --peachpuff:peachpuff;
 
   }
   
@@ -19,6 +19,8 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+     
     
   }
   
@@ -26,12 +28,12 @@
     font-weight: bold;
     margin: 0;
     font-size: 36px;
-    color:whitesmoke;
+    color: whitesmoke;
   }
   
   header a {
     text-decoration: none;
-    color:whitesmoke;
+    color: whitesmoke;
   }
   
   header nav {
@@ -57,10 +59,12 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    color:gray;
+    color: grey;
+    
     
   }
-
+    /*theoretically grid-container-1 doesnt' need to be here 
+    but when i erase bad things happen */
   
     .grid-container-1{
      
@@ -68,7 +72,7 @@
     grid-template-columns:200px 250px;
     grid-auto-rows:minmax(150px auto);
     grid-gap: 40px;
-    color:whitesmoke;
+    color: whitesmoke;
     border-style:solid;
     justify-content:center;
     grid-template-areas:
@@ -82,12 +86,20 @@
     .grid-item-2{
           
           border-style:solid;
-          border-color:black;
+          border-color: black;
           border-radius:100px;
-          height:320px;
-          width:300px;
+          height:250px;
+          width:750px;
           background-image:url(https://images.unsplash.com/photo-1491284055098-5f53b35308db?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
           grid-template-rows: 150%;
+          transform: translate(325px, 200px);
+          align-items:center;
+          justify-items:center;
+          align-content:center;
+          justify-content:center;
+          display:flex;
+          
+          
           
     
         }
@@ -98,12 +110,13 @@
       height:650px;
       border-radius: 100px;
       border-style:solid;
-      border-color:whitesmoke;
+      border-color: whitesmoke;
       background-image:url(https://images.unsplash.com/photo-1428592953211-077101b2021b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80);
-        color:black;
+        color: black;
+        transform: translate(275px, 100px);
     }
 
-    
+    /* are flex containers and grid containers the same ish?*/
       
   
   .flex-container {
@@ -132,13 +145,13 @@
     height:30%;
     border-radius: 100px;
     border-style:solid;
-    border-color:black;
+    border-color: black;
 
 }
 
 img:hover{
 
-border-color:whitesmoke;
+border-color: whitesmoke;
 }
 
 
@@ -163,7 +176,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Helvetica, Arial, sans-serif;
-    color:whitesmoke;
+    color: whitesmoke;
 
 }
 
@@ -172,7 +185,7 @@ body {
     height: 400px;
     overflow:scroll;
     border-style:solid;
-    border-color:black;
+    border-color: black;
     border-radius:12px;
     flex-grow: initial;
     
@@ -199,7 +212,7 @@ body {
 .bar {
 width:10%;
 height:20px;
-border:2px solid #fff;
+border:2px whitesmoke;
 margin:6px;
 cursor:pointer;
 transition:0.4s;
@@ -207,23 +220,23 @@ transition:0.4s;
 }
 
 li:hover{
-  color:gray;
+  color:grey;
 }
 
 
 
 .grid-item-3:hover{
-  color:whitesmoke;
-  border-color:black;
+  color: whitesmoke;
+  border-color: black;
 }
 
 .grid-item-2:hover{
-  color:peachpuff;
-  border-color:whitesmoke;
+  color: peachpuff;
+  border-color: whitesmoke;
 }
 
 .bar:hover{
-    background:whitesmoke;
+    background: black;
 }
 
 
@@ -250,7 +263,7 @@ li:hover{
 }
 
 .contact{
-    color:whitesmoke;
+    color: whitesmoke;
     display:flex;
     flex-wrap:wrap;
     justify-content: space-between;
